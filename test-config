@@ -1,0 +1,13 @@
+# comment
+     ### indented comment
+bindsym $mod+1 workspace 1
+    bindsym        $mod+2         workspace 2 # indented commnd
+
+bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+
+bindsym $mod+Control+x exec ~/bin/emacs-capture --eval '(org-capture)'
+
+#bindsym $mod+o exec rofi -show window -line-padding 4 \
+
+#bindsym $mod+XF86AudioRaiseVolume exec amixer -D pulse sset Master 1%+ \&\&
+#$mod+XF86AudioRaiseVolume exec amixer -D pulse sset Master 1%+ && pkill -RTMIN+1 i3blocks
