@@ -16,6 +16,7 @@ Install
 -------
 
 ```
+autoreconf --force --install
 ./configure
 make
 make install
