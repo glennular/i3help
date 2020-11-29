@@ -1,8 +1,11 @@
-i3help - keyboard shortcut help dialog
+i3help - keyboard binding help dialog
 ======================================
 i3help is a simple popup dialog to display all of your configure key binding. By default it will load the bindsyms from the running i3wm instance, there is also the abiliy to pass in a config file.
 
 As your i3 config will be consistently changes, you can bind this to $mod+? to remind yourself for your key bindings.
+
+![Image](../blob/master/img/i3help.png?raw=true)
+
 
 Requirements
 -----------
@@ -24,6 +27,11 @@ Running i3help
  `i3lock` should be ran while i3 is running so it can access the config via i3-msg.
 
  * Pressing any key will exit out the popup 
+ 
+ * Add to your i3/config:
+```
+bindsym $mod+question exec i3help
+```
 
  Optional Arguments:
 | Parameter                 | Default       | Description   |
@@ -38,3 +46,4 @@ TODOs
 - [ ] add a `#i3help` tag to ignore or replace the actual line
        Ex: replace all $mod+1 to 9 with a single entry
 - [ ] add ability to replace the command with user friendly text via comment
+- [ ] sort options
