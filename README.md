@@ -39,6 +39,7 @@ bindsym $mod+question exec i3help
 | :------------------------ |:-------------:| :-------------|
 | -f  --file 	       |	null           | the file name of a i3 config file to load
 | -c  --col          | 2           | number of columns to draw in the dialog
+| -l  --maxlen          | 100           | max length of a column before the text is trimmed
 
 
 TODOs

@@ -10,10 +10,14 @@ struct binding {
 
 static gint opt_columns = 2;
 static gchar *opt_filename = NULL;
+static gint opt_height = 0;
+static gint opt_maxtextlen = 100;
 
 static GOptionEntry entries[] =
 {
   { "col", 'c', 0, G_OPTION_ARG_INT, &opt_columns, "Number of columns", "N" },
+  { "maxtextlen", 'l', 0, G_OPTION_ARG_INT, &opt_maxtextlen, "Max length of a text command", "N" },
+  { "height", 'h', 0, G_OPTION_ARG_INT, &opt_height, "Force the height of the dialog", "N" },
   { "file", 'f', 0, G_OPTION_ARG_FILENAME, &opt_filename, "file to load instead of using i3-mesg", "M" },
   { NULL }
 };
@@ -76,6 +80,9 @@ GSList *parse(gchar *all){
 
   int n_lines = g_strv_length (lines);
   for (int i = 0; i < n_lines; i++){
+    if (strlen(lines[i]) > opt_maxtextlen) {
+      lines[i] = g_strndup(lines[i], opt_maxtextlen);
+    }
     line= g_strsplit_set(lines[i], " ", 3);
 
     if (line[0] == NULL) {
@@ -123,10 +130,20 @@ gboolean keypress_function (GtkWidget *widget, GdkEventKey *event, gpointer data
 void addLabel(GtkWidget *grid, int col, gchar* text){
   GtkWidget *label;
   label = gtk_label_new (NULL);
+
+  //gtk_widget_set_size_request(GTK_WIDGET(label),800,600);
+
   gtk_widget_set_vexpand (label, TRUE);
   gtk_widget_set_valign (label, GTK_ALIGN_START);
   gtk_label_set_markup(GTK_LABEL(label), text);
   gtk_grid_attach (GTK_GRID (grid), label, col, 0, 1, 1);
+
+  gint h1=-3, h2 = -3;
+GtkRequisition a1, a2;
+  gtk_widget_get_preferred_height (GTK_WIDGET(label), &h1, &h2);
+  gtk_widget_get_preferred_size(GTK_WIDGET(label), &a1, &a2);
+
+  g_print("height: %d %d\n", a1.height, a2.height);
 }
 
 static void activate (GtkApplication* app, gpointer user_data)
@@ -146,6 +163,8 @@ static void activate (GtkApplication* app, gpointer user_data)
   g_signal_connect (G_OBJECT (window), "key_press_event", G_CALLBACK (keypress_function), app);
 
   grid = gtk_grid_new ();
+
+  gtk_widget_set_size_request(GTK_WIDGET(grid),800,600);
   gtk_grid_set_column_spacing(GTK_GRID(grid), 10);
   gtk_widget_set_margin_start(grid, 10);
   gtk_widget_set_margin_end(grid, 10);
