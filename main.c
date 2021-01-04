@@ -10,15 +10,15 @@ struct binding {
 
 static gint opt_columns = 2;
 static gchar *opt_filename = NULL;
-static gint opt_height = 0;
 static gint opt_maxtextlen = 100;
+static gchar **opt_remaining = NULL;
 
 static GOptionEntry entries[] =
 {
   { "col", 'c', 0, G_OPTION_ARG_INT, &opt_columns, "Number of columns", "N" },
   { "maxtextlen", 'l', 0, G_OPTION_ARG_INT, &opt_maxtextlen, "Max length of a text command", "N" },
-  { "height", 'h', 0, G_OPTION_ARG_INT, &opt_height, "Force the height of the dialog", "N" },
   { "file", 'f', 0, G_OPTION_ARG_FILENAME, &opt_filename, "file to load instead of using i3-mesg", "M" },
+  { G_OPTION_REMAINING, ' ', 0, G_OPTION_ARG_FILENAME_ARRAY, &opt_remaining, NULL, NULL},
   { NULL }
 };
 
@@ -137,13 +137,6 @@ void addLabel(GtkWidget *grid, int col, gchar* text){
   gtk_widget_set_valign (label, GTK_ALIGN_START);
   gtk_label_set_markup(GTK_LABEL(label), text);
   gtk_grid_attach (GTK_GRID (grid), label, col, 0, 1, 1);
-
-  gint h1=-3, h2 = -3;
-GtkRequisition a1, a2;
-  gtk_widget_get_preferred_height (GTK_WIDGET(label), &h1, &h2);
-  gtk_widget_get_preferred_size(GTK_WIDGET(label), &a1, &a2);
-
-  g_print("height: %d %d\n", a1.height, a2.height);
 }
 
 static void activate (GtkApplication* app, gpointer user_data)
@@ -251,11 +244,22 @@ void parseOptions(int argc, char *argv[]){
   context = g_option_context_new ("- i3 keyboard shortcut help dialog");
   g_option_context_add_main_entries (context, entries, NULL);
   g_option_context_add_group (context, gtk_get_option_group (TRUE));
+  g_option_context_set_ignore_unknown_options (context, FALSE);
+
   if (!g_option_context_parse (context, &argc, &argv, &error))
-    {
-      g_print ("option parsing failed: %s\n", error->message);
-      exit (1);
+  {
+    g_print ("option parsing failed: %s\n", error->message);
+    exit (1);
+  }
+
+  if (opt_remaining != NULL){
+    if (opt_filename != NULL){
+      g_print("Can not pass filename as default and -f arguments\n");
+      exit(1);
     }
+    opt_filename = opt_remaining[0];
+  }
+
 }
 
 int main(int argc, char **argv) {
@@ -278,7 +282,7 @@ int main(int argc, char **argv) {
 
   app = gtk_application_new (NULL, G_APPLICATION_FLAGS_NONE);
   g_signal_connect (app, "activate", G_CALLBACK (activate), lines);
-  status = g_application_run (G_APPLICATION (app), argc, argv);
+  status = g_application_run (G_APPLICATION (app), 0, NULL);
   g_object_unref (app);
 
   return status;
