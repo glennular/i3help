@@ -3,139 +3,122 @@
 bindsym $mod+1 workspace 1
     bindsym        $mod+2         workspace 2 # indented commnd
 
-bindsym $mod+Shift+q exec --no-startup-id wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
-bindsym $mod+Shift+q exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 1 exec --no-startup-id wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide
+bindsym $mod+Shift+q 2 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 3 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 4 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 5 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 6 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 7 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 8 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 9 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+
+bindsym $mod+Shift+q 10 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 11 exec --no-startup-id wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide
+bindsym $mod+Shift+q 12 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 13 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 14 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 15 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 16 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 17 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 18 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 19 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+
+bindsym $mod+Shift+q 20 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 21 exec --no-startup-id wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide
+bindsym $mod+Shift+q 22 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 23 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 24 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 25 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 26 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 27 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 28 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 29 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+
+bindsym $mod+Shift+q 30 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 31 exec --no-startup-id wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide
+bindsym $mod+Shift+q 32 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 33 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 34 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 35 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 36 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 37 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 38 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 39 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+
+bindsym $mod+Shift+q 40 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 41 exec --no-startup-id wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide
+bindsym $mod+Shift+q 42 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 43 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 44 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 45 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 46 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 47 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 48 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 49 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+
+bindsym $mod+Shift+q 50 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 51 exec --no-startup-id wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide
+bindsym $mod+Shift+q 52 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 53 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 54 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 55 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 56 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 57 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 58 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 59 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+
+bindsym $mod+Shift+q 60 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 61 exec --no-startup-id wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide
+bindsym $mod+Shift+q 62 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 63 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 64 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 65 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 66 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 67 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 68 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 69 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+
+bindsym $mod+Shift+q 70 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 71 exec --no-startup-id wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide
+bindsym $mod+Shift+q 72 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 73 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 74 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 75 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 76 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 77 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 78 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 79 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+
+bindsym $mod+Shift+q 80 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 81 exec --no-startup-id wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide
+bindsym $mod+Shift+q 82 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 83 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 84 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 85 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 86 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 87 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 88 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 89 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+
+bindsym $mod+Shift+q 90 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 91 exec --no-startup-id wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide
+bindsym $mod+Shift+q 92 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 93 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 94 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 95 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 96 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 97 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 98 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 99 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+
+bindsym $mod+Shift+q 100 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 101 exec --no-startup-id wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide wide
+bindsym $mod+Shift+q 102 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 103 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 104 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 105 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 106 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 107 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 108 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+q 109 exec --no-startup-id ~/.config/i3/scripts/shutdown_menu -p rofi -c

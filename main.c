@@ -12,10 +12,12 @@ static gint opt_columns = 2;
 static gchar *opt_filename = NULL;
 static gint opt_maxtextlen = 100;
 static gchar **opt_remaining = NULL;
+static gint opt_maxrows = 50;
 
 static GOptionEntry entries[] =
 {
   { "col", 'c', 0, G_OPTION_ARG_INT, &opt_columns, "Number of columns", "N" },
+  { "maxrows", 'r', 0, G_OPTION_ARG_INT, &opt_maxtextlen, "Max number of rows to draw", "N" },
   { "maxtextlen", 'l', 0, G_OPTION_ARG_INT, &opt_maxtextlen, "Max length of a text command", "N" },
   { "file", 'f', 0, G_OPTION_ARG_FILENAME, &opt_filename, "file to load instead of using i3-mesg", "M" },
   { G_OPTION_REMAINING, ' ', 0, G_OPTION_ARG_FILENAME_ARRAY, &opt_remaining, NULL, NULL},
@@ -131,8 +133,6 @@ void addLabel(GtkWidget *grid, int col, gchar* text){
   GtkWidget *label;
   label = gtk_label_new (NULL);
 
-  //gtk_widget_set_size_request(GTK_WIDGET(label),800,600);
-
   gtk_widget_set_vexpand (label, TRUE);
   gtk_widget_set_valign (label, GTK_ALIGN_START);
   gtk_label_set_markup(GTK_LABEL(label), text);
@@ -214,7 +214,7 @@ GSList* join(GSList *lines){
   GSList *results = NULL;
   gchar *result = "";
   gint total = g_slist_length(lines),
-    colSize = total / opt_columns,
+    colSize = MIN(opt_maxrows, (total / opt_columns)),
     colMod = total % opt_columns,
     row = 0,
     col = 0;
@@ -223,8 +223,8 @@ GSList* join(GSList *lines){
     result = g_strdup_printf("%s%s", result, lines->data);
     lines = g_slist_next(lines);
     row++;
-    if ((col >= colMod && row == colSize)
-      || (col < colMod && row == colSize + 1)) {
+    if ((col >= colMod && row == colSize )
+      || (col <= colMod && row == colSize)) {
       results = g_slist_append(results, result);
       result = "";
       row=0;
