@@ -25,7 +25,7 @@ make install
 Running i3help
 --------------
 
- `i3lock` should be ran while i3 is running so it can access the config via i3-msg.
+ `i3help` should be ran while i3 is running so it can access the config via i3-msg.
 
  * Pressing any key will exit out the popup
 
