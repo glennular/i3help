@@ -27,8 +27,12 @@ Running i3help
 
  `i3lock` should be ran while i3 is running so it can access the config via i3-msg.
 
- * Pressing any key will exit out the popup 
- 
+ * Pressing any key will exit out the popup
+
+ * There are basic sizes set to try to make long command and config files show up. For long config files, you can use `<space>` to cycle through the pages.
+
+ * For longer configs, sizing can be adjusted with the `-col` and `-maxrows` flags
+
  * Add to your i3/config:
 ```
 bindsym $mod+question exec i3help
@@ -39,7 +43,8 @@ bindsym $mod+question exec i3help
 | :------------------------ |:-------------:| :-------------|
 | -f  --file 	       |	null           | the file name of a i3 config file to load
 | -c  --col          | 2           | number of columns to draw in the dialog
-| -l  --maxlen          | 100           | max length of a column before the text is trimmed
+| -r  --maxrows          | 50           | max number of rows to draw per a column
+| -l  --maxtextlen          | 100           | max length of a column before the text is trimmed
 
 
 TODOs
@@ -49,3 +54,4 @@ TODOs
        Ex: replace all $mod+1 to 9 with a single entry
 - [ ] add ability to replace the command with user friendly text via comment
 - [ ] sort options
+- [ ] dynamic sizing based on screen size and (instead of hardcoded values)

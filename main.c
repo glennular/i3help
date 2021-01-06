@@ -17,12 +17,18 @@ static gint opt_maxrows = 50;
 static GOptionEntry entries[] =
 {
   { "col", 'c', 0, G_OPTION_ARG_INT, &opt_columns, "Number of columns", "N" },
-  { "maxrows", 'r', 0, G_OPTION_ARG_INT, &opt_maxtextlen, "Max number of rows to draw", "N" },
+  { "maxrows", 'r', 0, G_OPTION_ARG_INT, &opt_maxrows, "Max number of rows to draw", "N" },
   { "maxtextlen", 'l', 0, G_OPTION_ARG_INT, &opt_maxtextlen, "Max length of a text command", "N" },
   { "file", 'f', 0, G_OPTION_ARG_FILENAME, &opt_filename, "file to load instead of using i3-mesg", "M" },
   { G_OPTION_REMAINING, ' ', 0, G_OPTION_ARG_FILENAME_ARRAY, &opt_remaining, NULL, NULL},
   { NULL }
 };
+
+
+static gint pagenum = 0;
+static gint pageTotal = 1;
+static GArray *labels = NULL;
+static GSList *parsedText = NULL;
 
 gchar* readProcess(){
   gchar *cmd = "i3-msg -t get_config";
@@ -124,19 +130,59 @@ GSList *parse(gchar *all){
   return results;
 }
 
-gboolean keypress_function (GtkWidget *widget, GdkEventKey *event, gpointer data) {
-    g_application_quit(G_APPLICATION(data));
-    return TRUE;
-}
-
-void addLabel(GtkWidget *grid, int col, gchar* text){
+void addLabel(GtkWidget *grid, int col){
   GtkWidget *label;
   label = gtk_label_new (NULL);
 
   gtk_widget_set_vexpand (label, TRUE);
   gtk_widget_set_valign (label, GTK_ALIGN_START);
-  gtk_label_set_markup(GTK_LABEL(label), text);
+  gtk_widget_set_halign (label, GTK_ALIGN_START);
   gtk_grid_attach (GTK_GRID (grid), label, col, 0, 1, 1);
+  g_array_append_val(labels, label);
+}
+
+void addPageLabel(GtkWidget *grid, int cols){
+  GtkWidget *label;
+  label = gtk_label_new (NULL);
+
+  gtk_widget_set_vexpand (label, TRUE);
+  gtk_widget_set_hexpand (label, TRUE);
+  gtk_widget_set_valign (label, GTK_ALIGN_END);
+  gtk_widget_set_halign (label, GTK_ALIGN_END);
+  gtk_label_set_markup(GTK_LABEL(label), "<span foreground='#808080'>&lt;space&gt; : next page</span>");
+  gtk_grid_attach (GTK_GRID (grid), label, 0, 1, cols, 1);
+
+
+  g_print("added page label");
+}
+
+void printNextPage() {
+  if (pageTotal == 1 && pagenum ==1) return;
+  if (pagenum == pageTotal) pagenum = 0;
+  GSList *text = parsedText;
+
+  for (int i = 0; i < opt_columns * pagenum; i++){
+    text = g_slist_next(text);
+  }
+  pagenum ++;
+  for (int i = 0; i < opt_columns; i++){
+    GtkWidget *label = g_array_index(labels, GtkWidget*, i);
+    if(text != NULL){
+      gtk_label_set_markup(GTK_LABEL(label), text->data);
+      text = g_slist_next(text);
+    } else {
+      gtk_label_set_markup(GTK_LABEL(label), "");
+    }
+  }
+}
+
+gboolean keypress_function (GtkWidget *widget, GdkEventKey *event, gpointer data) {
+    if (event->keyval == GDK_KEY_space){
+      printNextPage();
+      return TRUE;
+    }
+    g_application_quit(G_APPLICATION(data));
+    return TRUE;
 }
 
 static void activate (GtkApplication* app, gpointer user_data)
@@ -157,7 +203,6 @@ static void activate (GtkApplication* app, gpointer user_data)
 
   grid = gtk_grid_new ();
 
-  gtk_widget_set_size_request(GTK_WIDGET(grid),800,600);
   gtk_grid_set_column_spacing(GTK_GRID(grid), 10);
   gtk_widget_set_margin_start(grid, 10);
   gtk_widget_set_margin_end(grid, 10);
@@ -165,11 +210,16 @@ static void activate (GtkApplication* app, gpointer user_data)
   gtk_widget_set_margin_bottom(grid, 10);
   gtk_container_add (GTK_CONTAINER (window), grid);
 
-  int col = 0;
-  while(text != NULL){
-    addLabel(grid, col++, text->data);
-    text = g_slist_next(text);
+  labels = g_array_sized_new(FALSE, FALSE, sizeof(GtkWidget*), opt_columns);
+  for (int i = 0; i < opt_columns; i++){
+    addLabel(grid, i);
   }
+
+  if (pageTotal > 1) {
+    addPageLabel(grid, opt_columns);
+  }
+
+  printNextPage();
 
   gtk_widget_show_all (window);
 }
@@ -210,25 +260,35 @@ GSList* merge(GSList *lines){
   return results;
 }
 
+gint ceil_div(gint x, gint y){
+  return  x/y + (x % y != 0);
+}
+
 GSList* join(GSList *lines){
   GSList *results = NULL;
   gchar *result = "";
   gint total = g_slist_length(lines),
-    colSize = MIN(opt_maxrows, (total / opt_columns)),
-    colMod = total % opt_columns,
+    colSize = ceil_div(total, opt_columns),
+    cols = opt_columns,
+    colMod = colSize != opt_maxrows ? total % cols : 0,
     row = 0,
     col = 0;
 
+  if (colSize > opt_maxrows){
+    colSize = opt_maxrows;
+    cols = ceil_div(total, opt_maxrows);
+    colMod = 0;
+    pageTotal = ceil_div(cols, opt_columns);
+  }
   while(lines != NULL){
     result = g_strdup_printf("%s%s", result, lines->data);
     lines = g_slist_next(lines);
     row++;
-    if ((col >= colMod && row == colSize )
-      || (col <= colMod && row == colSize)) {
+    if (lines == NULL || row ==   (colSize - ((colMod>0 && col >= colMod ) ? 1 : 0))){
       results = g_slist_append(results, result);
       result = "";
       row=0;
-      col++;
+      col ++;
     } else {
       result = g_strdup_printf("%s\n", result);
     }
@@ -259,7 +319,6 @@ void parseOptions(int argc, char *argv[]){
     }
     opt_filename = opt_remaining[0];
   }
-
 }
 
 int main(int argc, char **argv) {
@@ -278,10 +337,10 @@ int main(int argc, char **argv) {
 
   lines = parse(all);
   lines = merge(lines);
-  lines = join(lines);
+  parsedText = join(lines);
 
   app = gtk_application_new (NULL, G_APPLICATION_FLAGS_NONE);
-  g_signal_connect (app, "activate", G_CALLBACK (activate), lines);
+  g_signal_connect (app, "activate", G_CALLBACK (activate), NULL);
   status = g_application_run (G_APPLICATION (app), 0, NULL);
   g_object_unref (app);
 
