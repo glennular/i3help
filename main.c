@@ -105,24 +105,24 @@ GSList *parse(gchar *all){
     else if (!g_str_has_prefix(line[0], "bindsym")){
       continue;
     }
-
-    while (g_str_has_prefix(line[2], "--")){
+    while (line[2] != NULL && g_str_has_prefix(line[2], "--")){
         args = g_strsplit_set(line[2], " ", 2);
         line[1] = g_strdup_printf("%s %s", line[1], args[0]);
         line[2] = args[1];
     }
-    if (g_str_has_prefix(line[1], "--")){
+    if (line[2] != NULL && line[1] != NULL && g_str_has_prefix(line[1], "--")){
         args = g_strsplit_set(line[2], " ", 2);
-        line[1] = g_strdup_printf("%s %s", line[1], args[0]);
-        line[2] = args[1];
+        if (args != NULL) {
+          line[1] = g_strdup_printf("%s %s", line[1], args[0]);
+          line[2] = args[1];
+        }
     }
 
     t = (struct binding*) malloc(sizeof(struct binding));
 
-    //TODO: error checking on parsing
     t->type = isModeTitle ? 3 : inMode ? 2 : 1;
-    t->keys = line[1];
-    t->cmd = isModeTitle ? "" : line[2];
+    t->keys = line[1] != NULL ? line[1] : "";
+    t->cmd = isModeTitle ? "" : line[2] != NULL ? line[2] : "";
 
     results = g_slist_prepend(results, t);
     isModeTitle = FALSE;
@@ -226,6 +226,7 @@ static void activate (GtkApplication* app, gpointer user_data)
 
 char* replaceDelimiters(const gchar *text, const gchar *delims, const gchar *replacement)
 {
+  if(text == NULL) return "";
   return g_strjoinv(replacement, g_strsplit(text, delims, -1));
 }
 
@@ -239,6 +240,7 @@ gchar* clean(gchar *text){
 }
 
 gchar *formatKeys(gchar *text){
+  if(text == NULL) return "";
   return g_strdup_printf("<span foreground='#dd0'>%s</span>",
                          g_strjoinv("</span> + <span foreground='#dd0'>", g_strsplit(text, "+", -1)));
 }
