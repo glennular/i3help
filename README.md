@@ -4,7 +4,8 @@ i3help is a simple popup dialog to display all of your configure key binding. By
 
 As your i3 config will be consistently changes, you can bind this to $mod+? to remind yourself for your key bindings.
 
-![Image](../main/img/i3help.png?raw=true)
+![Image](../main/img/i3help.gif?raw=true)
+ *image provided by [u/EllaTheCat](https://www.reddit.com/user/EllaTheCat)*
 
 
 Requirements

@@ -16,3 +16,10 @@ config.status
 *.tar.xz
 *.tar.gz
 i3help
+
+compile
+config.guess
+config.sub
+depcomp
+install-sh
+missing
